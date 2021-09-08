@@ -1101,7 +1101,7 @@ line-height: 21.6px; }
         background-image: url("assets/images/background-mobile.svg");
         background-color: #ffffff;
         
-        height: 115vh;
+        height: 125vh;
         background-position: bottom right; /* Center the image */
     }
 }
