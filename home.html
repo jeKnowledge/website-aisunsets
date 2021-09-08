@@ -24,10 +24,10 @@
     <ul class="nav-links">
 
 
-      <a href="#what-section" id="" class="nav-item">WHAT?</a>
-      <a href="#why-section" id="" class="nav-item">WHY?</a>
-      <a href="#sponsors-section" id="" class="nav-item">SPONSORS</a>
-      <a href="#jek-section" id=" " class="nav-item">ABOUT US</a>
+      <a href="#what-section" class="nav-item what">WHAT?</a>
+      <a href="#why-section"  class="nav-item why">WHY?</a>
+      <a href="#sponsors-section" class="nav-item sponsors">SPONSORS</a>
+      <a href="#jek-section" class="nav-item jek">ABOUT US</a>
     </ul>
     <div id="program-button-wrapper">
 
@@ -262,7 +262,10 @@
         <img id="jek-photo" src="assets\Photos\Photo02.jpg" alt="jeKnowledge team">
       </div>
       <div class="jek-column" id="jek-text-column">
-        <img id="jek-logo" src="assets\Logotipos\logo-jek.svg" alt="jeKnowledge logo">
+        <a href="https://jeknowledge.pt/">
+          <img id="jek-logo" src="assets\Logotipos\logo-jek.svg" alt="jeKnowledge logo">
+
+        </a>
         
         <h2>
           We’re a  Junior Company of FCTUC that was founded in 2008 in order to provide students the opportunity to apply their academic knowledge either in external or internal projects. These students attend several courses at the Faculty of Science and Technology, from Bachelor to Master. 
@@ -284,18 +287,24 @@
       </div>
       <div id="middle-footer">
         <div id="social-row">
-          <img class="social-logo" src="assets\Logotipos\Twitter.svg" alt="twitter">
-          <img class="social-logo" src="assets\Logotipos\Facebook.svg" alt="facebook">
-          <img class="social-logo" src="assets\Logotipos\Instagram.svg" alt="instagram">
-          <img class="social-logo" src="assets\Logotipos\Linkedin.svg" alt="linkedin">
+          <!--<img class="social-logo" src="assets\Logotipos\Twitter.svg" alt="twitter">
+          <img class="social-logo" src="assets\Logotipos\Facebook.svg" alt="facebook">-->
+          <a href="https://www.instagram.com/aisunsets/">
+            <img class="social-logo" src="assets\Logotipos\Instagram.svg" alt="instagram">
+
+          </a>
+          <a href="https://www.linkedin.com/company/aisunsets/">
+
+            <img class="social-logo" src="assets\Logotipos\Linkedin.svg" alt="linkedin">
+          </a>
           
         </div>
         <div id="nav-row">
 
-          <a href="#what-section" class="footer-item">What?</a>
-          <a href="#why-section" class="footer-item">Why?</a>
-          <a href="#sponsors-section" class="footer-item">Sponsors</a>
-          <a href="#jek-section"  class="footer-item">About us</a>
+          <a href="#what-section" class="footer-item what">What?</a>
+          <a href="#why-section"  class="footer-item why">Why?</a>
+          <a href="#sponsors-section" " class="footer-item sponsors">Sponsors</a>
+          <a href="#jek-section"  class="footer-item jek">About us</a>
           
         </div>
       </div>
@@ -308,6 +317,8 @@
   <h1></h1>
   <p> </p>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
 <script>
 document.addEventListener('DOMContentLoaded', nav)
 
@@ -328,6 +339,38 @@ function nav() {
 
     })
 }
+$( document ).ready(function() {
+
+$(".what").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#what-section").offset().top
+    }, 1000);
+});
+$(".why").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#why-section").offset().top
+    }, 1000);
+});
+$("#program-button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#schedule-section").offset().top
+    }, 1000);
+});
+
+$(".sponsors").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#sponsors-section").offset().top
+    }, 1000);
+});
+$(".jek").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#jek-section").offset().top
+    }, 1000);
+});
+
+
+});
+
 
   var button= document.getElementsByClassName("learn-more")
   var more= document.getElementsByClassName("more")
