@@ -8,9 +8,10 @@
 
   <link rel="stylesheet" href="wipeout.css">
   <link  rel="stylesheet" href="main.css">
+  <link rel="icon" href="assets\Logotipos\FavIcon.svg"
   <meta name="description" content="Talks at the sunset.">
   <meta name="theme-color" content="#ffffff"/>
-  <meta property="og:image" content="https://ibb.co/frCj61H">
+  <meta property="og:image" content="https://ibb.co/THMXDhf">
 <meta property="og:description" content="Talks at the sunset.">
 <meta property="og:title" content="AI Sunsets">
 
@@ -28,6 +29,8 @@
       <a href="#why-section"  class="nav-item why">WHY?</a>
       <a href="#sponsors-section" class="nav-item sponsors">SPONSORS</a>
       <a href="#jek-section" class="nav-item jek">ABOUT US</a>
+      <a href="#schedule-section" class="nav-item schedule">PROGRAM</a>
+      <a href="" class="nav-item tickets">GET TICKETS!</a>
     </ul>
     <div id="program-button-wrapper">
 
@@ -321,56 +324,67 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', nav)
+$( document ).ready(function() {
+  
+$(".what").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#what-section").offset().top
+  }, 1000);
+});
+$(".why").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#why-section").offset().top
+    }, 1000);
+  });
+  $("#program-button").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#schedule-section").offset().top
+    }, 1000);
+  });
+  
+$(".sponsors").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#sponsors-section").offset().top - 48
+  }, 1000);
+});
+$(".jek").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#jek-section").offset().top
+  }, 1000);
+});
+
+
+});
+
 
 function nav() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-base');
-    const navlinks = document.querySelector('.nav-links');
-    navlinks.style.transition = "none";
+    var navlinks = document.querySelector(".nav-links")
+    var navitem = document.getElementsByClassName(".nav-item")
+    //navlinks.style.transition = "none";
+    $( document ).ready(function() {
+
+      $(".nav-item").click(function(){
+        nav.classList.toggle('show');
+});    
+});    
+    
+    
+    
     burger.addEventListener('click', () => {
-      if( navlinks.style.transition =="none"){
-        
-      }else{
-        
-      }
+      navlinks.style.transition="transform 1s ease, opacity 0.5s ease-out";
+      $(window).resize(function() {
+        if (navlinks.style.transition!="none")
+        navlinks.style.transition="none";
+  //resize just happened, pixels changed
+});
       nav.classList.toggle('show');
 
-        //navlinks.style.display = "flex";
 
     })
+
 }
-$( document ).ready(function() {
-
-$(".what").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#what-section").offset().top
-    }, 1000);
-});
-$(".why").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#why-section").offset().top
-    }, 1000);
-});
-$("#program-button").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#schedule-section").offset().top
-    }, 1000);
-});
-
-$(".sponsors").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#sponsors-section").offset().top
-    }, 1000);
-});
-$(".jek").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#jek-section").offset().top
-    }, 1000);
-});
-
-
-});
-
 
   var button= document.getElementsByClassName("learn-more")
   var more= document.getElementsByClassName("more")
