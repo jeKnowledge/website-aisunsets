@@ -107,9 +107,10 @@ section{
 }
 
 #ai-logo {
-    padding-left: 134px;
+    margin-left: 134px;
     position: relative;
     margin-right:124px ;
+    width: 34px;
 }
 
 
@@ -790,8 +791,8 @@ padding-top:28px}
       #ai-logo 
       
       {
-        padding-left: 34px;
-           margin:0;
+          margin:0;
+          margin-left: 34px;
            margin-top: 24px;
 
 }
