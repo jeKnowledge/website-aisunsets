@@ -406,6 +406,7 @@ h2{
 box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.14);
 border-radius: 32px;
 pointer-events: auto;
+transition: all .4s ease-out;
 
 
 display: flex;
@@ -420,15 +421,18 @@ padding:32px;
 
 .why-card:hover {
     transform: translate(0,-13px);
-    transition: all .4s ease-in-out;
+    transition: all .4s ease-out;
+    -webkit-transition:  all .4s ease-out;
 }
 
 #cards-container:hover > .why-card:not(:hover){
-    transition: all .4s ease-in-out;
+    transition: all .5s ease-out;
+    -webkit-transition:  all .5s  ease-out;
 
         background: linear-gradient(210.29deg, rgba(255, 255, 255, 0.54) 2.18%, rgba(255, 255, 255, 0.135) 99.05%);
 backdrop-filter: blur(100px);
 }
+
 
 .bold-h2{
      font-family: "AlegreyaSans-Bold";
@@ -536,7 +540,7 @@ justify-content: space-between;
     padding-top: 42px;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .big-info-container{
@@ -558,6 +562,7 @@ justify-content: space-between;
     min-height: 292px;
     margin-top: 42px;
     margin-right: 16px;
+    
   }
 
   h5{
@@ -618,12 +623,14 @@ background: #A83420;
 border-radius: 24px;
 text-decoration: none;
 color: #FFFFFF;
+cursor: pointer;
 margin-top: 20px;
+transition: all .3s ease-in-out;
 
 }
 .learn-more:hover{
     transition: all .3s ease-in-out;
-
+    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -632,6 +639,8 @@ opacity: 0;
 position: absolute;  
   padding-top: 20px;;
     max-width: 337px;
+    pointer-events: none;
+
 }
 .orange.learn-more{
     background: #F48F12;

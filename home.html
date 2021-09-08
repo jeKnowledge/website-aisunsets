@@ -383,19 +383,29 @@ $(".jek").click(function() {
     if (more.style.opacity === "1") {
       more.style.position = "absolute";
       more.style.opacity = "0";
+      more.style.pointerEvents = "none";
       more.style.transition = "none";
       this.style.position="static";
       this.style.opacity = "1";
+      this.style.pointerEvents = "all";
+      this.style.cursor="pointer";
+      arrow.style.cursor="arrow";
+      this.style.transition = "all .7s ease-in-out";
+
       
     } else {
       more.style.position="static";
       more.style.opacity = "1";
       this.style.opacity = "0";
+      more.style.pointerEvents = "all";
+      this.style.pointerEvents = "none";
+      more.style.cursor="pointer";
+
       this.style.position = "absolute";
       this.style.transition = "none";
+      more.style.transition = "all 1s linear";
+this.style.cursor="arrow";
 
-      this.style.transition = "none";
-      more.style.transition = "opacity 1s linear";
 
     } });}
     for (i = 0; i < more.length; i++) {
@@ -407,15 +417,26 @@ $(".jek").click(function() {
       button.style.opacity = "0";
       button.style.position = "absolute";
       this.style.position="static";
+      this.style.pointerEvents = "all";
+
+      button.style.pointerEvents = "none";
+      button.style.cursor="arrow";
+      this.style.cursor="pointer";
+
       this.style.opacity = "1";
       
     } else {
       button.style.position="static";
       button.style.opacity = "1";
       this.style.position = "absolute";
+      this.style.pointerEvents = "none";
+      button.style.pointerEvents = "all";
+      button.style.cursor="pointer";
+      this.style.cursor="arrow";
+
       this.style.opacity = "0";
       this.style.transition = "none";
-      button.style.transition = "opacity 1s linear";
+      button.style.transition = "all .7s ease-in-out";
     }
   });
   }
