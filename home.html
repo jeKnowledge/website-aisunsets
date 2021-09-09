@@ -326,7 +326,10 @@
         </div>
       </div>
       <div id= "right-footer">
-        <img id="ai-logo-big" src="assets\Logotipos\Logotype.svg" alt="ai sunsets logo">
+        <a href="#initial-section" id="ai-logo-footer">
+
+          <img id="ai-logo-big" src="assets\Logotipos\Logotype.svg" alt="ai sunsets logo">
+        </a> 
 
       </div>
       </div>
@@ -371,7 +374,11 @@ $(".schedule").click(function() {
     scrollTop: $("#schedule-section").offset().top
   }, 1000);
 });
-
+$("#ai-logo-footer").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#initial-section").offset().top
+  }, 1000);
+});
 
 });
 
