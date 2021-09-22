@@ -658,6 +658,8 @@ h5 {
     justify-content: space-between;
     padding-top: 68px;
     padding-bottom: 68px;
+    align-items: center;
+
 }
 
 h6 {
