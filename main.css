@@ -7,54 +7,49 @@ html {
 
 @font-face {
     font-family: "AlegreyaSans-Bold";
-    src:
-    url("../assets/Alegreya_Sans/AlegreyaSans-Bold.ttf") format("truetype");
+    src: url("../assets/Alegreya_Sans/AlegreyaSans-Bold.ttf") format("truetype");
     font-display: swap;
     /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: "AlegreyaSans-Regular";
-    src: 
-    url("../assets/Alegreya_Sans/AlegreyaSans-Regular.ttf") format("truetype");
+    src: url("../assets/Alegreya_Sans/AlegreyaSans-Regular.ttf") format("truetype");
     font-display: swap;
     /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: "AlegreyaSans-Medium";
-    src: 
-    url("../assets/Alegreya_Sans/AlegreyaSans-Medium.ttf") format("truetype");
+    src: url("../assets/Alegreya_Sans/AlegreyaSans-Medium.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
 }
+
 @font-face {
     font-family: "Alegreya-Medium";
-    src:
-    url("../assets/Alegreya/Alegreya-Medium.ttf") format("truetype");
+    src: url("../assets/Alegreya/Alegreya-Medium.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
 }
+
 @font-face {
     font-family: "Alegreya-Regular";
-    src:
-    url("../assets/Alegreya/Alegreya-Regular.ttf") format("truetype");
+    src: url("../assets/Alegreya/Alegreya-Regular.ttf") format("truetype");
     font-display: swap;
     /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: "Alegreya-Bold";
-    src:
-    url("../assets/Alegreya/Alegreya-Bold.ttf") format("truetype");
+    src: url("../assets/Alegreya/Alegreya-Bold.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
 }
 
 @font-face {
     font-family: "AlegreyaSansSC-Bold";
-    src:
-    url("../assets/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf") format("truetype");
+    src: url("../assets/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
 }
@@ -470,9 +465,11 @@ h3 {
     filter: grayscale(100%) opacity(60%);
     transition: all .4s ease-in-out;
 }
-.partner-logo img{
+
+.partner-logo img {
     width: 150px;
-    }
+}
+
 .partner-logo:hover {
     filter: grayscale(0%) opacity(100%);
     transition: all .4s ease-in-out;
@@ -500,10 +497,7 @@ h3 {
     color: #141818;
     margin-top: 130px;
     font-family: "Alegreya-Medium";
-
 }
-
-
 
 .program-container {
     display: flex;
@@ -518,36 +512,35 @@ h3 {
 }
 
 .big-info-container {
-    margin-top:40px;
+    margin-top: 40px;
     height: fit-content;
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-
-
-.time-container{
+.time-container {
     width: 135px;
 }
-
 
 .info-container h3.red {
     margin-bottom: 12px;
 }
-.time-container h3{
-    font-family: "AlegreyaSans-Medium";
 
+.time-container h3 {
+    font-family: "AlegreyaSans-Medium";
 }
+
 hr {
     border: 0;
-    clear:both;
-    display:block;
-    width: 100%;               
+    clear: both;
+    display: block;
+    width: 100%;
     background-color: rgba(20, 24, 24, 0.75);
     height: 3px;
-  }
-  .dash{
+}
+
+.dash {
     display: none;
 }
 
@@ -566,6 +559,7 @@ h5 {
     font-family: "AlegreyaSans-Medium";
     padding-top: 8px;
 }
+
 .red {
     color: #A83420;
 }
@@ -575,9 +569,8 @@ h5 {
 }
 
 .grey {
-    color: rgba(20, 24, 24, 0.75);}
-
-
+    color: rgba(20, 24, 24, 0.75);
+}
 
 .learn-more {
     width: 112px;
@@ -667,7 +660,6 @@ h5 {
     padding-top: 68px;
     padding-bottom: 68px;
     align-items: center;
-
 }
 
 h6 {
@@ -815,17 +807,23 @@ h6 {
     .nav-item::before {
         display: none;
     }
+    #nav-row {
+        display: none;
+        ;
+    }
     .nav-base .nav-links a:hover {
         color: #FFA434;
     }
+    /* --------------------------------------SECTION INITIAL----------------------------------------------------------------*/
     #initial-section .section-container {
         padding-top: 0;
     }
-    #what-section .section-container {
-        flex-direction: column;
-    }
     h1#hero-text {
         font-size: 48px;
+    }
+    /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
+    #what-section .section-container {
+        flex-direction: column;
     }
     #what-photo-column {
         -webkit-box-ordinal-group: 2;
@@ -847,14 +845,33 @@ h6 {
     .what-column h2 {
         max-width: 100%;
     }
+    /* --------------------------------------SECTION WHY----------------------------------------------------------------*/
+    #cards-container {
+        grid-template-rows: 441px 441px 441px;
+        grid-template-columns: 296px;
+        row-gap: 64px;
+    }
+    #cards-container h2 {
+        font-size: 22.5px;
+        line-height: 27px;
+    }
+    #why-section h1 {
+        align-self: baseline;
+    }
+    #break {
+        display: block;
+    }
+    /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
+    .program-container {
+        flex-direction: column;
+    }
+    /* --------------------------------------SECTION JEK----------------------------------------------------------------*/
     #jek-section .section-container {
         flex-direction: column;
     }
     #jek-section .section-container :nth-child(1) {
         margin-right: 0;
     }
-    
-        
     .jek-column h2 {
         max-width: 100%;
         font-size: 24px;
@@ -879,22 +896,7 @@ h6 {
     .jek-column {
         margin-right: 0;
     }
-    .program-container {
-        flex-direction: column;
-    }
-    #cards-container {
-        grid-template-rows: 441px 441px 441px;
-        grid-template-columns: 296px;
-        row-gap: 64px;
-    }
-    #cards-container h2 {
-        font-size: 22.5px;
-        line-height: 27px;
-    }
-    #nav-row {
-        display: none;
-        ;
-    }
+    /* --------------------------------------FOOTER----------------------------------------------------------------*/
     #footer-section .section-container {
         flex-direction: column-reverse;
         text-align: center;
@@ -907,12 +909,6 @@ h6 {
     }
     #ai-logo-big {
         width: 54px;
-    }
-    #why-section h1 {
-        align-self: baseline;
-    }
-    #break {
-        display: block;
     }
 }
 
@@ -927,16 +923,6 @@ h6 {
     .nav-base {
         height: 48px;
     }
-    #what-section .section-container {
-        flex-direction: column;
-    }
-    .why-card {
-        padding: 38.4px;
-    }
-    h1#hero-text {
-        padding-top: 97px;
-        font-size: 36px;
-    }
     #ai-logo {
         width: 28px;
     }
@@ -945,17 +931,27 @@ h6 {
         height: 42.14px;
         font-size: 16px;
     }
+    h1#hero-text {
+        padding-top: 97px;
+        font-size: 36px;
+    }
     h1 {
         font-size: 48px;
+    }
+    /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
+    #what-section .section-container {
+        flex-direction: column;
     }
     .what-column h2 {
         margin-top: 42px;
         font-size: 18px;
         line-height: 21.8px;
     }
+    /* --------------------------------------SECTION WHY----------------------------------------------------------------*/
     .why-card {
         padding: 34px;
     }
+    /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
     #schedule-section h4 {
         font-size: 48px;
     }
@@ -963,10 +959,10 @@ h6 {
         font-size: 32px;
         margin-top: 65px;
     }
-  .dash{
-      display: inline-block;
-      margin-right: 8px;
-  }
+    .dash {
+        display: inline-block;
+        margin-right: 8px;
+    }
     .info-container {
         padding-top: 22px;
     }
@@ -980,10 +976,10 @@ h6 {
         font-size: 18px;
         line-height: 21.6px;
     }
-    
     .big-info-container {
         flex-direction: column;
     }
+    /* --------------------------------------SECTION JEK----------------------------------------------------------------*/
     #jek-logo {
         width: 251px;
     }
@@ -991,6 +987,7 @@ h6 {
         font-size: 18px;
         line-height: 21.6px;
     }
+    /* --------------------------------------SECTION PARTNERS----------------------------------------------------------------*/
     #partners-container {
         grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
         padding-top: 35px;
@@ -1004,6 +1001,7 @@ h6 {
     #sponsors-section .section-container {
         padding: 34px;
     }
+    /* --------------------------------------FOOTER----------------------------------------------------------------*/
     #social-row {
         width: 30%;
     }
