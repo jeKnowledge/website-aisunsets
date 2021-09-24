@@ -7,8 +7,7 @@ html {
 
 @font-face {
     font-family: "AlegreyaSans-Bold";
-    src: /*url("../assets/fonts/Montserrat-Light.otf") format('opentype'), url("../fonts/Metropolis-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    /*url("../assets/fonts/Metropolis-Light.woff") format("woff"), /* Modern Browsers */
+    src:
     url("../assets/Alegreya_Sans/AlegreyaSans-Bold.ttf") format("truetype");
     font-display: swap;
     /* Safari, Android, iOS */
@@ -16,8 +15,7 @@ html {
 
 @font-face {
     font-family: "AlegreyaSans-Regular";
-    src: /*url("../assets/fonts/Montserrat-Light.otf") format('opentype'), url("../fonts/Metropolis-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    /*url("../assets/fonts/Metropolis-Light.woff") format("woff"), /* Modern Browsers */
+    src: 
     url("../assets/Alegreya_Sans/AlegreyaSans-Regular.ttf") format("truetype");
     font-display: swap;
     /* Safari, Android, iOS */
@@ -25,17 +23,21 @@ html {
 
 @font-face {
     font-family: "AlegreyaSans-Medium";
-    src: /*url("../assets/fonts/Montserrat-Light.otf") format('opentype'), url("../fonts/Metropolis-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    /*url("../assets/fonts/Metropolis-Light.woff") format("woff"), /* Modern Browsers */
+    src: 
     url("../assets/Alegreya_Sans/AlegreyaSans-Medium.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
 }
-
+@font-face {
+    font-family: "Alegreya-Medium";
+    src:
+    url("../assets/Alegreya/Alegreya-Medium.ttf") format("truetype");
+    /* Safari, Android, iOS */
+    font-display: swap;
+}
 @font-face {
     font-family: "Alegreya-Regular";
-    src: /*url("../assets/fonts/Montserrat-Light.otf") format('opentype'), url("../fonts/Metropolis-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    /*url("../assets/fonts/Metropolis-Light.woff") format("woff"), /* Modern Browsers */
+    src:
     url("../assets/Alegreya/Alegreya-Regular.ttf") format("truetype");
     font-display: swap;
     /* Safari, Android, iOS */
@@ -43,8 +45,7 @@ html {
 
 @font-face {
     font-family: "Alegreya-Bold";
-    src: /*url("../assets/fonts/Montserrat-Light.otf") format('opentype'), url("../fonts/Metropolis-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    /*url("../assets/fonts/Metropolis-Light.woff") format("woff"), /* Modern Browsers */
+    src:
     url("../assets/Alegreya/Alegreya-Bold.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
@@ -52,8 +53,7 @@ html {
 
 @font-face {
     font-family: "AlegreyaSansSC-Bold";
-    src: /*url("../assets/fonts/Montserrat-Light.otf") format('opentype'), url("../fonts/Metropolis-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    /*url("../assets/fonts/Metropolis-Light.woff") format("woff"), /* Modern Browsers */
+    src:
     url("../assets/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-display: swap;
@@ -470,7 +470,9 @@ h3 {
     filter: grayscale(100%) opacity(60%);
     transition: all .4s ease-in-out;
 }
-
+.partner-logo img{
+    width: 150px;
+    }
 .partner-logo:hover {
     filter: grayscale(0%) opacity(100%);
     transition: all .4s ease-in-out;
@@ -496,40 +498,57 @@ h3 {
 
 #schedule-section h1 {
     color: #141818;
+    margin-top: 130px;
+    font-family: "Alegreya-Medium";
+
 }
 
-#talks-workshops-container {
-    padding-top: 88px;
-    ;
-}
+
 
 .program-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .info-container {
-    padding-top: 42px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .big-info-container {
-    max-width: 396px;
+    margin-top:40px;
     height: fit-content;
     display: flex;
     flex-direction: row;
-    margin-right: 30px;
+    width: 100%;
 }
 
-.big-info-container:nth-of-type(3n) {
-    margin-right: 0px;
+
+
+.time-container{
+    width: 135px;
 }
 
-.vl {
-    min-height: 292px;
-    margin-top: 42px;
-    margin-right: 16px;
+
+.info-container h3.red {
+    margin-bottom: 12px;
+}
+.time-container h3{
+    font-family: "AlegreyaSans-Medium";
+
+}
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color: rgba(20, 24, 24, 0.75);
+    height: 3px;
+  }
+  .dash{
+    display: none;
 }
 
 h5 {
@@ -545,12 +564,8 @@ h5 {
 .info-container h2 {
     padding: 0;
     font-family: "AlegreyaSans-Medium";
-}
-
-.info-container h2.bold-h2 {
     padding-top: 8px;
 }
-
 .red {
     color: #A83420;
 }
@@ -560,16 +575,9 @@ h5 {
 }
 
 .grey {
-    color: #A6A6A6;
-}
+    color: rgba(20, 24, 24, 0.75);}
 
-.vl.orange {
-    border-left: 3px solid #F48F12;
-}
 
-.vl.red {
-    border-left: 3px solid #A83420;
-}
 
 .learn-more {
     width: 112px;
@@ -802,8 +810,7 @@ h6 {
         opacity: 0;
     }
     .schedule, .tickets {
-        display: none;
-        /*display: block;*/
+        display: block;
     }
     .nav-item::before {
         display: none;
@@ -846,10 +853,8 @@ h6 {
     #jek-section .section-container :nth-child(1) {
         margin-right: 0;
     }
-    /*
-        .partner-logo img{
-            max-width: 117px;
-        }^*/
+    
+        
     .jek-column h2 {
         max-width: 100%;
         font-size: 24px;
@@ -956,29 +961,28 @@ h6 {
     }
     #schedule-section h1 {
         font-size: 32px;
-        margin-top: 10px;
+        margin-top: 65px;
     }
-    #talks-workshops-container {
-        padding-top: 52px;
-    }
+  .dash{
+      display: inline-block;
+      margin-right: 8px;
+  }
     .info-container {
-        padding-top: 34px;
+        padding-top: 22px;
     }
     h5 {
         font-size: 36px;
     }
-    .info-container h3 {
+    .info-container h3, .time-container h3 {
         font-size: 24px;
     }
     .info-container h2 {
         font-size: 18px;
         line-height: 21.6px;
     }
-    .vl {
-        min-height: 245px;
-    }
+    
     .big-info-container {
-        max-width: 240px;
+        flex-direction: column;
     }
     #jek-logo {
         width: 251px;
@@ -995,7 +999,7 @@ h6 {
         filter: grayscale(0%) opacity(100%);
     }
     .partner-logo img {
-        max-width: 70px;
+        max-width: 120px;
     }
     #sponsors-section .section-container {
         padding: 34px;
