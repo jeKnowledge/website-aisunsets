@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Sunsets</title>
+    <script src="jquery.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", nav);
+      $(document).ready(function () {
+        $(".what").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#what-section").offset().top,
+            },
+            1000
+          );
+        });
+        $(".why").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#why-section").offset().top,
+            },
+            1000
+          );
+        });
+        $("#program-button").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#schedule-section").offset().top,
+            },
+            1000
+          );
+        });
+
+        $(".sponsors").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#sponsors-section").offset().top - 48,
+            },
+            1000
+          );
+        });
+        $(".jek").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#jek-section").offset().top,
+            },
+            1000
+          );
+        });
+        $(".schedule").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#schedule-section").offset().top,
+            },
+            1000
+          );
+        });
+        $("#ai-logo-footer").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#initial-section").offset().top,
+            },
+            1000
+          );
+        });
+      });
+      function nav() {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-base");
+        var navlinks = document.querySelector(".nav-links");
+        var navitem = document.getElementsByClassName(".nav-item");
+        //navlinks.style.transition = "none";
+        $(document).ready(function () {
+          $(".nav-item").click(function () {
+            nav.classList.toggle("show");
+          });
+        });
+
+        burger.addEventListener("click", () => {
+          navlinks.style.transition =
+            "transform 1s ease, opacity 0.5s ease-out";
+          $(window).resize(function () {
+            if (navlinks.style.transition != "none")
+              navlinks.style.transition = "none";
+            //resize just happened, pixels changed
+          });
+          nav.classList.toggle("show");
+        });
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="fonts.css" />
+  </head>
+
+  <body>
+    <section id="initial-section" id="my-nav-base">
+      <nav class="nav-base">
+        <ul class="nav-links">
+          <li>
+            <a
+              href="#initial-section"
+              name="ai-sunsets-logo"
+              class="nav-item-logo"
+            >
+              <img
+                src="assets/Logotipos/NavLogo.svg"
+                id="ai-logo"
+                alt="ai sunsets logo"
+              />
+            </a>
+          </li>
+          <li><a href="#what-section" class="nav-item what">WHAT?</a></li>
+          <li><a href="#why-section" class="nav-item why">WHY?</a></li>
+          <li>
+            <a href="#sponsors-section" class="nav-item sponsors">SPONSORS</a>
+          </li>
+          <li><a href="#jek-section" class="nav-item jek">ABOUT US</a></li>
+          <div>
+            <a href="#schedule-section" class="nav-item-schedule schedule"
+              >See program</a
+            >
+          </div>
+        </ul>
+        <div class="burger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </nav>
+
+      <!----------------------------------------------------------------------------------------------------->
+      <!---------------------------------------------- Hero --------------------------------------------->
+      <!----------------------------------------------------------------------------------------------------->
+
+      <section id="hero_content">
+        <h1 class="description">
+          artificial intelligence<br />
+          — at the sunset october<br />
+          2022 edition
+        </h1>
+        <a class="register-button" href="#register">Register here!</a>
+      </section>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- WHAT --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section id="what-section">
+      <img src="img/image 12.png" class="img1" />
+      <div class="description-what">
+        <h2>
+          <span class="change-color">AI sunsets </span> is a cycle of high-level
+          sessions
+        </h2>
+        <p>
+          It brings AI enthusiasts together and allows them to share their
+          insights, experience, and ideas. During the sessions, the participants
+          will be able to attend not one but three content-based activities that
+          will allow them to dive further into the innovative worl of AI and
+          explore what may be one of the most fundamental subjects of the next
+          decade.
+        </p>
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- WHY --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section id="why-section">
+      <div class="why-section__title">
+        <h1 class="why-section__title__text">Why AI Sunsets ?</h1>
+      </div>
+
+      <div class="why-section__content">
+        <img src="img/why_card1.png" />
+        <img src="img/why_card2.png" />
+        <img src="img/why_card3.png" />
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- SPONSORS --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section id="sponsors-section">
+      <h2 class="title4">Our sponsors</h2>
+      <div class="sponsor_img_container">
+        <img
+          class="sponsor-logo1"
+          src="img/FramedropLong 1.png"
+          width="100%"
+          height="auto"
+        />
+        <img class="sponsor-logo2" src="img/ciberbitlogo.png" />
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- PROGRAM ---------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section class="schedule-section">
+      <div class="scheduleBG">
+        <h2 class="title5">Program</h2>
+        <h3 class="date">28 September 2022</h3>
+        <div class="separator"></div>
+
+        <div id="program_first" class="program_grid">
+          <h3 class="talk-title">Opening</h3>
+          <p class="hora">14:00</p>
+          <p class="talk-desc">
+            Time to came in and take a seat! We ara almost starting!
+          </p>
+        </div>
+
+        <div class="program_grid" id="program_second">
+          <h3 class="talk-title">
+            Talk- AI and gaming <br />
+            <span>with JD Costa from Framedrop </span>
+          </h3>
+          <p class="hora">14:30</p>
+          <p class="talk-desc">
+            With this talk, you'll dive into the world of gaming and how this
+            area is improving with the help of AI
+          </p>
+        </div>
+
+        <div id="program_third" class="program_grid">
+          <h3 class="talk-title">Break</h3>
+          <p class="hora">15:30</p>
+          <p class="talk-desc">
+            A quick time out to rest before getting back to work!
+          </p>
+        </div>
+
+        <div class="program_grid" id="program_fourth">
+          <h3 class="talk-title">
+            Workshop – Introdution to Digital Marketing <br />
+            <span>with Marco Gouveia</span>
+          </h3>
+          <p class="hora">15:45</p>
+          <p class="talk-desc">
+            With Marco's help, you'll learn more about Marketing Digital and how
+            it works. Are you ready to explore themes like Google & Social Ads
+            and "How to set a budget to apply in digital?", and much more?
+          </p>
+        </div>
+
+        <div id="program_fifth" class="program_grid">
+          <h3 class="talk-title">Coffee Break</h3>
+          <p class="hora">16:45</p>
+          <p class="talk-desc">
+            A fun time to drink your coffee and recharge your batteries before
+            our long awaited debate!
+          </p>
+        </div>
+
+        <div class="program_grid" id="program_fourth">
+          <h3 class="talk-title">
+            Workshop – Introdution to Digital Marketing <br />
+            <span>with Marco Gouveia</span>
+          </h3>
+          <p class="hora">15:45</p>
+          <p class="talk-desc">
+            With Marco's help, you'll learn more about Marketing Digital and how
+            it works. Are you ready to explore themes like Google & Social Ads
+            and "How to set a budget to apply in digital?", and much more?
+          </p>
+        </div>
+
+        <div class="img-schedule">
+          <img src="img/mariopb 2.png" />
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- JEK --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section id="jek-section">
+      <p class="small-text1">We do Technology and Inovation. And AI Sunsets.</p>
+
+      <div class="foto-jek">
+        <img src="img/image 9.png" />
+      </div>
+
+      <div class="logo_text_jek">
+        <img src="img/image 10.png" />
+
+        <p class="desc-jek">
+          We're a Junior Company of FCTUC that was founded in 2008 in order to
+          provide students the opportunity to apply their academic knowledge
+          either in external or internal projects. These students attend several
+          courses at the Faculty of Science and Technology, from Bachelor to
+          Master.
+        </p>
+      </div>
+    </section>
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- FOOTER --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section id="rodape">
+      <div class="nav-bar-container">
+        <li class="logoAI-bottom">
+          <a
+            href="#initial-section"
+            name="ai-sunsets-logo"
+            class="footer-nav-item-logo"
+          >
+            <img src="assets/Logotipos/NavLogo.svg" class="logoAI-img" />
+          </a>
+        </li>
+        <li class="nav-bar what">
+          <a href="#what-section" class="nav-item">WHAT?</a>
+        </li>
+        <li class="nav-bar why">
+          <a href="#why-section" class="nav-item">WHY?</a>
+        </li>
+        <li class="nav-bar sponsors">
+          <a href="#sponsors-section" class="nav-item">SPONSORS</a>
+        </li>
+        <li class="nav-bar about-us">
+          <a href="#jek-section" class="nav-item">ABOUT US</a>
+        </li>
+      </div>
+      <div class="separator2"></div>
+      <div class="footer-bottom">
+        <h5 class="bottom-text">
+          artificial intelligence— at the sunset<br />
+          october 2022 edition
+        </h5>
+        <div class="socialmedia-bottom">
+          <!--   <h4 class="socialmedia-text">SOCIAL MEDIA</h4>-->
+          <div class="logos-row">
+            <div class="socialmedia-logo1">
+              <a href="https://www.instagram.com/aisunsets/"
+                ><img
+                  src="img/insta.png"
+                  id="img_insta"
+                  width="100%"
+                  height="auto"
+              /></a>
+            </div>
+            <div class="socialmedia-logo2">
+              <a href="https://www.linkedin.com/company/aisunsets/"
+                ><img
+                  src="img/linkedInpng.png"
+                  id="img_linke"
+                  width="100%"
+                  height="auto"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-contacts">
+          <h4 class="contact-us">CONTACT US <br /></h4>
+          <h5 class="contacts">
+            +351 912 047 202<br />
+            hi@aisunsets.com
+          </h5>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
