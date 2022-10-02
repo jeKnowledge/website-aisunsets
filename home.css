@@ -57,6 +57,12 @@ li {
   width: max-content;
 }
 
+.nav-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-item-logo {
   padding-right: 5vw;
 }
@@ -458,7 +464,7 @@ h2.title5 {
   color: #ffffff;
   font-family: SongMyung-Regular;
   font-weight: 400;
-  padding-right: 5vw;
+  margin-right: 5vw !important;
   padding-top: 5vh;
 }
 
