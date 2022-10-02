@@ -1,412 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>AI Sunsets</title>
+    <script src="jquery.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", nav);
+      $(document).ready(function () {
+        $(".what").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#what-section").offset().top,
+            },
+            1000
+          );
+        });
+        $(".why").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#why-section").offset().top,
+            },
+            1000
+          );
+        });
+        $("#program-button").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#schedule-section").offset().top,
+            },
+            1000
+          );
+        });
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="main.css" as="style">
+        $(".sponsors").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#sponsors-section").offset().top - 48,
+            },
+            1000
+          );
+        });
+        $(".jek").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#jek-section").offset().top,
+            },
+            1000
+          );
+        });
+        $(".schedule").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#schedule-section").offset().top,
+            },
+            1000
+          );
+        });
+        $("#ai-logo-footer").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: $("#initial-section").offset().top,
+            },
+            1000
+          );
+        });
+      });
+      function nav() {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-base");
+        var navlinks = document.querySelector(".nav-links");
+        var navitem = document.getElementsByClassName(".nav-item");
+        //navlinks.style.transition = "none";
+        $(document).ready(function () {
+          $(".nav-item").click(function () {
+            nav.classList.toggle("show");
+          });
+        });
 
-  <link rel="stylesheet" href="wipeout.css">
-  <link rel="stylesheet" href="main.css">
-  <link rel="icon" href="assets\Logotipos\FavIcon.svg">
-  <meta name="theme-color" content="#ffffff" />
+        burger.addEventListener("click", () => {
+          navlinks.style.transition =
+            "transform 1s ease, opacity 0.5s ease-out";
+          $(window).resize(function () {
+            if (navlinks.style.transition != "none")
+              navlinks.style.transition = "none";
+            //resize just happened, pixels changed
+          });
+          nav.classList.toggle("show");
+        });
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="fonts.css" />
+  </head>
 
-  <!-- Primary Meta Tags -->
-  <title>AI Sunsets</title>
-  <meta name="title" content="AI Sunsets">
-  <meta name="description" content="Talks at the sunset.">
+  <body>
+    <section id="initial-section" id="my-nav-base">
+      <nav class="nav-base">
+        <ul class="nav-links">
+          <li>
+            <a
+              href="#initial-section"
+              name="ai-sunsets-logo"
+              class="nav-item-logo"
+            >
+              <img
+                src="assets/Logotipos/NavLogo.svg"
+                id="ai-logo"
+                alt="ai sunsets logo"
+              />
+            </a>
+          </li>
+          <li><a href="#what-section" class="nav-item what">WHAT?</a></li>
+          <li><a href="#why-section" class="nav-item why">WHY?</a></li>
+          <li>
+            <a href="#sponsors-section" class="nav-item sponsors">SPONSORS</a>
+          </li>
+          <li><a href="#jek-section" class="nav-item jek">ABOUT US</a></li>
+          <div>
+            <a href="#schedule-section" class="nav-item-schedule schedule"
+              >See program</a
+            >
+          </div>
+        </ul>
+        <div class="burger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </nav>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ai-sunsets.herokuapp.com/">
-  <meta property="og:title" content="AI Sunsets">
-  <meta property="og:description" content="AI sunsets is a cycle of
-high-level sessions that
-brings AI enthusiasts
-together and allows them
-to share their insights,
-experience, and ideas.">
-  <meta property="og:image" content="assets\images\meta.jpg">
+      <!----------------------------------------------------------------------------------------------------->
+      <!---------------------------------------------- Hero --------------------------------------------->
+      <!----------------------------------------------------------------------------------------------------->
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://ai-sunsets.herokuapp.com/">
-  <meta property="twitter:title" content="AI Sunsets">
-  <meta property="twitter:description" content="AI sunsets is a cycle of
-high-level sessions that
-brings AI enthusiasts
-together and allows them
-to share their insights,
-experience, and ideas.">
-  <meta property="twitter:image" content="assets\images\meta.jpg">
-
-</head>
-
-<body>
-  <nav class="nav-base" id="my-nav-base">
-
-    <a href="#initial-section" name="ai-sunsets-logo"> <img src="assets/Logotipos/NavLogo.svg" id="ai-logo"
-        alt="ai sunsets logo" /></a>
-    <ul class="nav-links">
-
-
-      <li><a href="#what-section" class="nav-item what">WHAT?</a></li>
-      <li><a href="#why-section" class="nav-item why">WHY?</a></li>
-      <li><a href="#sponsors-section" class="nav-item sponsors">SPONSORS</a></li>
-      <li><a href="#jek-section" class="nav-item jek">ABOUT US</a></li>
-      <li><a href="#schedule-section" class="nav-item schedule">PROGRAM</a></li>
-      <li><a href="register.html" class="nav-item tickets">REGISTER!</a></li>
-    </ul>
-    <div id="program-button-wrapper">
-
-      <a href="#schedule-section" id="program-button">
-        <p>See Program</p>
-      </a>
-    </div>
-
-    <div class="burger">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-    </div>
-  </nav>
-
-
-  <section id="initial-section">
-    <div class="section-container">
-
-      <h1 id="hero-text">artificial intelligence <br>
-        — at the <span> sunset</span><br>
-        october 2021 edition</h1>
-
-      <a href="register.html" id="tickets-button"><span>Register here!</span></a>
-    </div>
-  </section>
-  <section id="what-section">
-    <div class="section-container">
-
-      <div class="what-column" id="what-photo-column">
-        <img id="what-photo" src="assets\Photos\Photo01.jpg" alt="A talk in a past edition.">
-      </div>
-      <div class="what-column" id="what-text-column">
-        <h1><span>AI sunsets</span> <br>is a cycle of <br>high-level <br>sessions
+      <section id="hero_content">
+        <h1 class="description">
+          artificial intelligence<br />
+          — at the sunset october<br />
+          2022 edition
         </h1>
+        <a class="register-button" href="#register">Register here!</a>
+      </section>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- WHAT --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+    <section id="what-section">
+      <img src="img/image 12.png" class="img1" />
+      <div class="description-what">
         <h2>
-          It brings AI enthusiasts together and allows them to share their insights, experience, and ideas.
-          During the sessions, the participants will be able to attend not one but three content-based activities that
-          will allow them to dive further into the innovative world of AI and explore what may be one of the most
-          fundamental subjects of the next decade.
+          <span class="change-color">AI sunsets </span> is a cycle of high-level
+          sessions
         </h2>
+        <p>
+          It brings AI enthusiasts together and allows them to share their
+          insights, experience, and ideas. During the sessions, the participants
+          will be able to attend not one but three content-based activities that
+          will allow them to dive further into the innovative worl of AI and
+          explore what may be one of the most fundamental subjects of the next
+          decade.
+        </p>
       </div>
-    </div>
-    <div></div>
-  </section>
-  <section id="why-section">
-    <div class="section-container">
+    </section>
 
-      <h1>Why <span>
-          <div id="break"> </div>AI sunsets
-        </span>?
-      </h1>
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- WHY --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
 
-      <div id="cards-container">
-
-        <div class="why-card">
-          <img src="assets\Info Cards\education.svg" alt="education" />
-
-          <h2 class="bold-h2">Increase Your Knowledge
-          </h2>
-          <h2>It’s a great opportunity to further develop one’s knowledge about artificial intelligence with experts in
-            of
-            the Industry.</h2>
-
-        </div>
-        <div class="why-card">
-          <img src="assets\Info Cards\networking.svg" alt="networking" />
-          <h2 class="bold-h2">Networking
-          </h2>
-          <h2>Don’t miss the chance to connect to other connoisseurs in this field, you’ll surround yourself with people
-            who share the same passion as you.</h2>
-        </div>
-        <div class="why-card">
-          <img src="assets\Info Cards\learning.svg" alt="learning" />
-          <h2 class="bold-h2">Having Fun While Learning
-          </h2>
-          <h2>We work hard to provide you the best experience you can have, in the most comfortable and fun space so we
-            can get you in the best mood for learning.</h2>
-        </div>
+    <section id="why-section">
+      <div class="why-section__title">
+        <h1 class="why-section__title__text">Why AI Sunsets ?</h1>
       </div>
-    </div>
-  </section>
-  <section id="sponsors-section">
-    <div class="section-container">
 
-      <h3>Our Sponsors</h3>
-
-
-      <div id="partners-container">
-
-        <a href="https://www2.deloitte.com/pt/pt.html" target="_blank" class="partner-logo">
-          <img src="assets\images\sponsors\DeloitteNewLogo.jpg" alt="sponsor" />
-        </a>
-        
-        <a href="https://redlight.dev/" target="_blank" class="partner-logo">
-          <img src="assets\images\sponsors\redlight.png" alt="sponsor" />
-        </a>
-
-
+      <div class="why-section__content">
+        <img src="img/why_card1.png" />
+        <img src="img/why_card2.png" />
+        <img src="img/why_card3.png" />
       </div>
-      
-    </div>
+    </section>
 
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- SPONSORS --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
 
-  </section>
-  <section id="schedule-section">
-    <div class="section-container">
+    <section id="sponsors-section">
+      <h2 class="title4">Our sponsors</h2>
+      <div class="sponsor_img_container">
+        <img
+          class="sponsor-logo1"
+          src="img/FramedropLong 1.png"
+          width="100%"
+          height="auto"
+        />
+        <img class="sponsor-logo2" src="img/ciberbitlogo.png" />
+      </div>
+    </section>
 
-      <h4>Program</h4>
-      <h1>6 october 2021</h1>
-      <hr class="new1">
-      <div id="talks-workshops-container">
-        <div id="talks-container" class="program-container">
-          <div class="big-info-container">
-            <div class="time-container">
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- PROGRAM ---------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
 
-              <h3 ><span class="dash">­—  </span>14:15</h3>
-            </div>
+    <section class="schedule-section">
+      <div class="scheduleBG">
+        <h2 class="title5">Program</h2>
+        <h3 class="date">28 September 2022</h3>
+        <div class="separator"></div>
 
-            <div class="info-container">
-              <h3>Opening</h3>
-              
-              <h2>Time to come in and take a seat! The show is about to start!</h2>
-            </div>
+        <div id="program_first" class="program_grid">
+          <h3 class="talk-title">Opening</h3>
+          <p class="hora">14:00</p>
+          <p class="talk-desc">
+            Time to come in and take a seat! The show is about to start!
+          </p>
+        </div>
 
-          </div>
-          <div class="big-info-container">
-            <div class="time-container">
+        <div class="program_grid" id="program_second">
+          <h3 class="talk-title">
+            Talk - Artificial text: from birth to BERT <br />
+            <span>with Pedro Verruma from Talkdesk</span>
+          </h3>
+          <p class="hora">14:30</p>
+          <p class="talk-desc">
+            In this talk you will learn about how Machine Learning allows for a
+            computer to<br />
+            understand and manipulate human language.
+          </p>
+        </div>
 
-              <h3 class="red"><span class="dash">­—  </span>14:30</h3>
-            </div>
-
-            <div class="info-container">
-              <h3 class="red">Talk</h3>
-
-              <h3>Artificial text: from birth to BERT</h3>
-              <h2 class="grey">with Pedro Verruma from Talkdesk</h2>
-
-              <h2>In this talk you will learn about how Machine Learning allows for a computer to understand and
-                manipulate human language.</h2>
-            </div>
-
-          </div>
-          <div class="big-info-container">
-            <div class="time-container">
-
-              <h3 ><span class="dash">­—  </span>15:30</h3>
-            </div>
-
-            <div class="info-container">
-
-              <h3>Break</h3>
-
-              <h2>A quick time out to relax before getting back to work!
-              </h2>
-            </div>
-
-          </div>
-          <div class="big-info-container">
-            <div class="time-container">
-
-              <h3 class="red"><span class="dash">­—  </span>15:45</h3>
-            </div>
-
-            <div class="info-container">
-              <h3 class="red">Workshop</h3>
-
-              <h3>Transfer Learning: a hands-on approach</h3>
-              <h2 class="grey">with Critical Software</h2>
-
-              <h2>Take this opportunity to come in contact with transfer learning. In this workshop you'll get to develop your skills in machine learning. Don't miss this chance!  </h2>
-            </div>
-
-          </div>
-          <div class="big-info-container">
-            <div class="time-container">
-
-              <h3 ><span class="dash">­—  </span>17:15</h3>
-            </div>
-
-            <div class="info-container">
-
-              <h3>Coffee Break</h3>
-
-              <h2>A fun time to drink your coffee and recharge your batteries before our long awaited debate!
-              </div>
-
-          </div>
-          <div class="big-info-container">
-            <div class="time-container">
-
-              <h3 class="red"><span class="dash">­—  </span>17:45</h3>
-            </div>
-
-            <div class="info-container">
-              <h3 class="red">Debate</h3>
-
-
-              <h2>Watch our lecturers debate about some of the most important questions in Artificial Intelligence today. 
-</h2>
-            </div>
-
-          </div>
+        <div class="img-schedule">
+          <img src="img/mariopb 2.png" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="jek-section">
-    <div class="section-container">
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- JEK --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
 
-      <div class="jek-column" id="jek-photo-column">
-        <img id="jek-photo" src="assets\Photos\Photo02.jpg" alt="jeKnowledge team">
+    <section id="jek-section">
+      <p class="small-text1">We do Technology and Inovation. And AI Sunsets.</p>
+
+      <div class="foto-jek">
+        <img src="img/image 9.png" />
       </div>
-      <div class="jek-column" id="jek-text-column">
-        <a target="_blank" href="https://jeknowledge.pt/">
-          <img id="jek-logo" src="assets\Logotipos\logo-jek.svg" alt="jeKnowledge logo">
 
-        </a>
+      <div class="logo_text_jek">
+        <img src="img/image 10.png" />
 
-        <h2>
-          We’re a Junior Company of FCTUC that was founded in 2008 in order to provide students the opportunity to apply
-          their academic knowledge either in external or internal projects. These students attend several courses at the
-          Faculty of Science and Technology, from Bachelor to Master.
-          <br><br>At jeKnowledge there are opportunities to work in multidisciplinary teams, as well as to develop new
-          skills applicable in real situations.
-        </h2>
+        <p class="desc-jek">
+          We're a Junior Company of FCTUC that was founded in 2008 in order to
+          provide students the opportunity to apply their academic knowledge
+          either in external or internal projects. These students attend several
+          courses at the Faculty of Science and Technology, from Bachelor to
+          Master.
+        </p>
       </div>
-    </div>
-    <div></div>
-  </section>
-  <section id="footer-section">
-    <div class="section-container">
+    </section>
+    <!----------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- FOOTER --------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
 
-      <div id="left-footer">
-        <h6>Contact us</h6>
-        <h2>+351 912 047 202<br>
-          hi@aisunsets.com</h2>
-
-      </div>
-      <div id="middle-footer">
-        <div id="social-row">
-          <!--<img class="social-logo" src="assets\Logotipos\Twitter.svg" alt="twitter">
-          <img class="social-logo" src="assets\Logotipos\Facebook.svg" alt="facebook">-->
-          <a target="_blank" href="https://www.instagram.com/aisunsets/">
-            <img class="social-logo" src="assets\Logotipos\Instagram.svg" alt="instagram">
-
+    <section id="rodape">
+      <div class="nav-bar-container">
+        <li class="logoAI-bottom">
+          <a
+            href="#initial-section"
+            name="ai-sunsets-logo"
+            class="footer-nav-item-logo"
+          >
+            <img src="assets/Logotipos/NavLogo.svg" class="logoAI-img" />
           </a>
-          <a target="_blank" href="https://www.linkedin.com/company/aisunsets/">
-
-            <img class="social-logo" src="assets\Logotipos\Linkedin.svg" alt="linkedin">
-          </a>
-
+        </li>
+        <li class="nav-bar what">
+          <a href="#what-section" class="nav-item">WHAT?</a>
+        </li>
+        <li class="nav-bar why">
+          <a href="#why-section" class="nav-item">WHY?</a>
+        </li>
+        <li class="nav-bar sponsors">
+          <a href="#sponsors-section" class="nav-item">SPONSORS</a>
+        </li>
+        <li class="nav-bar about-us">
+          <a href="#jek-section" class="nav-item">ABOUT US</a>
+        </li>
+      </div>
+      <div class="separator2"></div>
+      <div class="footer-bottom">
+        <h5 class="bottom-text">
+          artificial intelligence— at the sunset<br />
+          october 2022 edition
+        </h5>
+        <div class="socialmedia-bottom">
+          <!--   <h4 class="socialmedia-text">SOCIAL MEDIA</h4>-->
+          <div class="logos-row">
+            <div class="socialmedia-logo1">
+              <a href="https://www.instagram.com/aisunsets/"
+                ><img
+                  src="img/insta.png"
+                  id="img_insta"
+                  width="100%"
+                  height="auto"
+              /></a>
+            </div>
+            <div class="socialmedia-logo2">
+              <a href="https://www.linkedin.com/company/aisunsets/"
+                ><img
+                  src="img/linkedInpng.png"
+                  id="img_linke"
+                  width="100%"
+                  height="auto"
+              /></a>
+            </div>
+          </div>
         </div>
-        <div id="nav-row">
-
-          <a href="#what-section" class="footer-item what">What?</a>
-          <a href="#why-section" class="footer-item why">Why?</a>
-          <a href="#sponsors-section" " class=" footer-item sponsors">Sponsors</a>
-          <a href="#jek-section" class="footer-item jek">About us</a>
-
+        <div class="container-contacts">
+          <h4 class="contact-us">CONTACT US <br /></h4>
+          <h5 class="contacts">
+            +351 912 047 202<br />
+            hi@aisunsets.com
+          </h5>
         </div>
       </div>
-      <div id="right-footer">
-        <a href="#initial-section" id="ai-logo-footer">
-
-          <img id="ai-logo-big" src="assets\Logotipos\Logotype.svg" alt="ai sunsets logo">
-        </a>
-
-      </div>
-    </div>
-  </section>
-  <h1></h1>
-  <p> </p>
-</body>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', nav)
-  $(document).ready(function () {
-
-    $(".what").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#what-section").offset().top
-      }, 1000);
-    });
-    $(".why").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#why-section").offset().top
-      }, 1000);
-    });
-    $("#program-button").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#schedule-section").offset().top
-      }, 1000);
-    });
-
-    $(".sponsors").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#sponsors-section").offset().top - 48
-      }, 1000);
-    });
-    $(".jek").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#jek-section").offset().top
-      }, 1000);
-    });
-    $(".schedule").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#schedule-section").offset().top
-      }, 1000);
-    });
-    $("#ai-logo-footer").click(function () {
-      $('html, body').animate({
-        scrollTop: $("#initial-section").offset().top
-      }, 1000);
-    });
-
-  });
-
-
-  function nav() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-base');
-    var navlinks = document.querySelector(".nav-links")
-    var navitem = document.getElementsByClassName(".nav-item")
-    //navlinks.style.transition = "none";
-    $(document).ready(function () {
-
-      $(".nav-item").click(function () {
-        nav.classList.toggle('show');
-      });
-    });
-
-
-
-    burger.addEventListener('click', () => {
-      navlinks.style.transition = "transform 1s ease, opacity 0.5s ease-out";
-      $(window).resize(function () {
-        if (navlinks.style.transition != "none")
-          navlinks.style.transition = "none";
-        //resize just happened, pixels changed
-      });
-      nav.classList.toggle('show');
-
-
-    })
-
-  }
-
-
-</script>
-
+    </section>
+  </body>
 </html>

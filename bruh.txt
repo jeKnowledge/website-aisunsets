@@ -1,0 +1,70 @@
+
+  /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
+  #what-section .section-container {
+      flex-direction: column;
+  }
+  .what-column h2 {
+      margin-top: 42px;
+      font-size: 18px;
+      line-height: 21.8px;
+  }
+  /* --------------------------------------SECTION WHY----------------------------------------------------------------*/
+  .why-card {
+      padding: 34px;
+  }
+  /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
+  #schedule-section h4 {
+      font-size: 48px;
+  }
+  #schedule-section h1 {
+      font-size: 32px;
+      margin-top: 65px;
+  }
+  .dash {
+      display: inline-block;
+      margin-right: 8px;
+  }
+  .info-container {
+      padding-top: 22px;
+  }
+  h5 {
+      font-size: 36px;
+  }
+  .info-container h3, .time-container h3 {
+      font-size: 24px;
+  }
+  .info-container h2 {
+      font-size: 18px;
+      line-height: 21.6px;
+  }
+  .big-info-container {
+      flex-direction: column;
+  }
+  /* --------------------------------------SECTION JEK----------------------------------------------------------------*/
+  #jek-logo {
+      width: 251px;
+  }
+  .jek-column h2 {
+      font-size: 18px;
+      line-height: 21.6px;
+  }
+  /* --------------------------------------SECTION PARTNERS----------------------------------------------------------------*/
+  #partners-container {
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      padding-top: 35px;
+  }
+  .partner-logo {
+      filter: grayscale(0%) opacity(100%);
+  }
+  .partner-logo img {
+      max-width: 120px;
+  }
+  #sponsors-section .section-container {
+      padding: 34px;
+  }
+  /* --------------------------------------FOOTER----------------------------------------------------------------*/
+  #social-row {
+      width: 30%;
+  }
+}
+
