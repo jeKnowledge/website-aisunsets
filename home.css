@@ -1546,10 +1546,6 @@ h2.title5 {
     padding-bottom: 8vh;
   }
 
-  /* .why-section__content {
-    padding: 0 2vw;
-  }*/
-
   .why-section__content {
     display: flex;
     flex-direction: column;
@@ -1559,7 +1555,7 @@ h2.title5 {
 
   .why-section__content img {
     height: auto;
-    width: 90%;
+    max-width: 100%;
     padding-bottom: 5vh;
   }
 
