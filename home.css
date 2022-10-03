@@ -196,7 +196,7 @@ li {
 #what-section {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   padding: 12vh 6vw;
 }
 
@@ -1390,7 +1390,7 @@ h2.title5 {
   }
 
   .why-section__content img {
-    height: auto;
+    height: intrinsic;
     width: 100%;
     max-width: 80%;
     max-height: auto;
