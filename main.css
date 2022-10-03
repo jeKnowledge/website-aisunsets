@@ -4,18 +4,13 @@ html {
   font-family: "AlegreyaSans-Regular";
   overflow-x: hidden;
 }
-
-@font-face {
-  font-family: "AlegreyaSans-Bold";
-  src: url("../assets/Alegreya_Sans/AlegreyaSans-Bold.ttf") format("truetype");
-  font-display: swap;
-  /* Safari, Android, iOS */
+body {
+  overflow-x: hidden;
 }
 
 @font-face {
-  font-family: "AlegreyaSans-Regular";
-  src: url("../assets/Alegreya_Sans/AlegreyaSans-Regular.ttf")
-    format("truetype");
+  font-family: "SongMyung-Regular";
+  src: url("../fonts/SongMyung-Regular.ttf") format("truetype");
   font-display: swap;
   /* Safari, Android, iOS */
 }
@@ -27,46 +22,30 @@ html {
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Alegreya-Medium";
-  src: url("../assets/Alegreya/Alegreya-Medium.ttf") format("truetype");
-  /* Safari, Android, iOS */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Alegreya-Regular";
-  src: url("../assets/Alegreya/Alegreya-Regular.ttf") format("truetype");
-  font-display: swap;
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Alegreya-Bold";
-  src: url("../assets/Alegreya/Alegreya-Bold.ttf") format("truetype");
-  /* Safari, Android, iOS */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "AlegreyaSansSC-Bold";
-  src: url("../assets/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf")
-    format("truetype");
-  /* Safari, Android, iOS */
-  font-display: swap;
-}
-
 .section-container {
-  padding: 148px 134px;
+  padding: 148px 100px;
 }
 
 section {
   width: 100.3vw;
 }
 
+#initial-section {
+  background-image: url(img/hero/bg.png);
+  height: 100vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 100% calc(100%);
+  /* props para para o terceiro comentário do StackOverflow 
+    eu n sei porque e que isto funciona mas muito fixe */
+  margin: 0;
+  width: 100vw;
+  top: 0;
+}
+
 .nav-base {
   top: 40px;
-  width: 100vw;
+  width: 90vw;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -80,16 +59,15 @@ section {
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-  width: 100%;
+  width: 250%;
 }
 
 .nav-base .nav-links a {
   font-family: "AlegreyaSans-Bold";
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 25px;
   text-decoration: none;
   color: #ffffff;
-  width: max-content;
 }
 
 .nav-base a:hover {
@@ -166,61 +144,20 @@ section {
   transform: translateX(0%);
   opacity: 1;
 }
-
 #program-button {
-  margin-right: 124px;
-  position: relative;
+  background: #af3b11;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding: 2rem 0rem 2rem 0em;
+  z-index: 2;
+  box-shadow: rgba(175, 59, 17, 0.47) 20px 22px 0px 1px;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 30px;
   text-decoration: none;
   text-align: center;
-  top: 0px;
-  width: 243px;
-  height: 64px;
-  background-color: #c73d25;
-  border-radius: 24px;
-  display: flex;
-  justify-content: center;
-  font-family: "AlegreyaSans-Bold";
-  transition: background 0.5s ease-out;
-  align-items: center;
-  z-index: 1;
-}
-
-#program-button::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  width: 240px;
-  height: 64px;
-  top: -2px;
-  left: 0;
-  right: 0px;
-  bottom: 0;
-  border-radius: 26px;
-  padding: 1.5px;
-  background: linear-gradient(45deg, #ffa335, #0e2fdd);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-}
-
-#program-button:hover::before {
-  box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.24);
-  padding: 2px;
-  background: #e8d5d1;
-}
-
-#program-button:hover {
-  background-color: #ffa335;
-  box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.24);
-  transition: background 0.5s ease-out;
-}
-
-#program-button-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  width: 200px;
 }
 
 .schedule,
@@ -230,17 +167,6 @@ section {
 
 /* ---------------------------------------------------------------------------------------------SECTION 1-----------------------------------------------------------------*/
 
-#initial-section {
-  height: 100vh;
-  background-image: url("assets/images/background.svg");
-  background-position: right;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */
-}
-
 #initial-section .section-container {
   display: flex;
   padding-top: 0;
@@ -248,13 +174,14 @@ section {
 }
 
 h1 {
-  font-family: "Alegreya-Bold";
+  font-family: "SongMyung-Regular";
   font-size: 64px;
   color: #f4efdf;
 }
 
 h1#hero-text {
-  padding-top: 192px;
+  padding-top: 42vh;
+  padding-bottom: 15vh;
 }
 
 h1#hero-text span {
@@ -262,47 +189,22 @@ h1#hero-text span {
 }
 
 #tickets-button {
-  margin-top: 32px;
-  width: 243px;
-  height: 64px;
-  font-size: 24px;
-  background: linear-gradient(94.81deg, #ff8b00 4.26%, #dea45e 114.28%);
-  /* Green */
-  box-shadow: 0px 38px 42px #7c1a09;
-  border-radius: 24px;
   text-decoration: none;
+  font-style: normal;
+  background: #801a06;
+  padding: 2rem 1rem 2rem 1rem;
+  box-shadow: rgba(175, 59, 17, 0.47) 20px 22px 0px 1px;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 400;
+  z-index: 3;
+  font-size: 38px;
   text-align: center;
   display: flex;
   justify-content: center;
-  font-family: "AlegreyaSans-Bold";
-  position: relative;
-  -webkit-backface-visibility: hidden;
-  align-items: center;
-}
 
-#tickets-button:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 24px;
-  background: linear-gradient(94.81deg, #0276e1 4.26%, #5ed6de 114.28%);
-  transition: opacity 0.5s ease-out;
-  z-index: 1;
-  opacity: 0;
-}
-
-#tickets-button:hover:after {
-  opacity: 1;
-}
-
-#tickets-button span {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  z-index: 2;
+  width: 243px;
 }
 
 #break {
@@ -322,7 +224,7 @@ h1#hero-text span {
   padding-top: 80px;
   padding-bottom: 80px;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .what-column {
@@ -937,24 +839,56 @@ h6 {
     font-size: 16px;
   }
   h1#hero-text {
-    padding-top: 97px;
+    padding-top: 45vh;
     font-size: 36px;
+    padding-bottom: 20vh;
   }
   h1 {
     font-size: 48px;
   }
+
+  #tickets-button {
+    text-decoration: none;
+    font-style: normal;
+    background: #801a06;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    box-shadow: rgba(175, 59, 17, 0.47) 20px 22px 0px 1px;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: 400;
+    z-index: 3;
+    font-size: 28px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    line-height: 35px;
+
+    width: 243px;
+  }
   /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
   #what-section .section-container {
     flex-direction: column;
+    max-width: 90%;
   }
   .what-column h2 {
     margin-top: 42px;
     font-size: 18px;
     line-height: 21.8px;
+    max-width: 90%;
+  }
+
+  .what-column img {
+    max-width: 100%;
   }
   /* --------------------------------------SECTION WHY----------------------------------------------------------------*/
   .why-card {
     padding: 34px;
+  }
+
+  #why-section h1 {
+    align-self: center;
   }
   /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
   #schedule-section h4 {
@@ -1015,10 +949,11 @@ h6 {
 
 @media screen and (max-width: 900px) {
   #initial-section {
-    background-image: url("assets/images/background-mobile.svg");
-    background-color: #ffffff;
+    background-image: url("img/hero/fundomobile.png");
+    /*background-color: #ffffff;
     height: 125vh;
     background-position: bottom right;
     /* Center the image */
+    overflow-x: hidden;
   }
 }
