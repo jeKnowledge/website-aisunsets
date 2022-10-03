@@ -1390,7 +1390,7 @@ h2.title5 {
   }
 
   .why-section__content img {
-    /* height: intrinsic;*/
+    height: intrinsic;
     height: auto;
     width: 100%;
     max-width: 80%;
