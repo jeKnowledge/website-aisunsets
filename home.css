@@ -1397,9 +1397,10 @@ h2.title5 {
 
   .why-section__content img {
     height: auto;
-    max-width: 100%;
-    padding-bottom: 5vh;
     width: 100%;
+    max-width: 80%;
+    max-height: auto;
+    padding-bottom: 5vh;
   }
 
   /* --------------------------------------SPONSORS----------------------------------------------------------------*/
