@@ -231,6 +231,10 @@ li {
   padding: 10vh 0;
 }
 
+#why-section h1 span {
+  color: #FFFFFF;
+}
+
 .why-section__title {
   align-items: center;
   justify-content: center;
@@ -246,9 +250,13 @@ li {
 }
 
 .why-section__content {
-  display: flex;
+  display: grid;
   flex-direction: row;
   justify-content: space-around;
+  grid-template-columns: 25vw 25vw 25vw;
+    grid-template-rows: 400px;
+    ;
+    column-gap: 48px;
   padding: 0 2vw;
 }
 
@@ -257,7 +265,71 @@ li {
   width: 25%;
   align-items: flex-start;
 }
+.why-card {
+  background: #AF3B11;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.14);
+  border-radius: 32px;
+  pointer-events: auto;
+  transition: transform .6s ease-out, background 1s ease-out;
+  -webkit-transition: transform .6s ease-out, background 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 141.5%;
+  /* or 20px */
 
+  display: flex;
+  align-items: center;
+}
+.bold-h2 {
+  font-family: 'Song Myung';
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 80.5%;
+/* or 14px */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+.why-card img {
+  width: 100px;
+}
+
+.why-card:hover {
+  transform: translate(0, -13px);
+  transition: transform .6s ease-out, background 1s ease-out;
+  -webkit-transition: transform .6s ease-out, background 1s ease-out;
+}
+
+#cards-container:hover>.why-card:not(:hover) {
+  transition: transform .6s ease-out, background 1s ease-out;
+  -webkit-transition: transform .6s ease-out, background 1s ease-out;
+  background: linear-gradient(210.29deg, rgba(255, 255, 255, 0.54) 2.18%, rgba(255, 255, 255, 0.135) 99.05%);
+  backdrop-filter: blur(100px);
+}
+
+
+.why-card h2 {
+  text-align: center;
+}
+
+.bglight {
+  background: #C44F38;
+}
+.bglighter {
+  background: #FD8A60;
+}
 /*--------------------------------------------*/
 /*----------------- Sponsors ------------------*/
 /*--------------------------------------------*/
@@ -534,6 +606,22 @@ h2.title5 {
     /* height: 115vh;*/
   }
 
+  .why-section__content {
+    display: grid;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-template-columns: 25vw 25vw 25vw;
+      grid-template-rows: 400px;
+      ;
+      column-gap: 48px;
+    padding: 0 2vw;
+  }
+
+  .why-card {
+    font-size: 18px;
+  }
+  
+
   #initial-section .section-container {
     padding-top: 0;
   }
@@ -742,9 +830,21 @@ h2.title5 {
     /* height: 115vh;*/
   }
 
+  .why-section__content {
+    /* eu não sei fazer colunas em grid */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-card {
+    margin-bottom: 1rem;
+  }
+  
+
   #initial-section .section-container {
     padding-top: 0;
   }
+  
 
   #hero_content {
     padding-top: 40vh;
