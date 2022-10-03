@@ -194,26 +194,22 @@ li {
 /*--------------------------------------------*/
 
 #what-section {
-  /*height: 90vh;*/
   display: flex;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 110px;
-  padding: 20vh 0;
+  flex-direction: row;
+  align-items: start;
+  padding: 12vh 6vw;
 }
 
 .img1 {
-  grid-column-start: 1;
-  justify-self: end;
+  margin-right: 10vh !important;
 }
 
 .description-what {
-  grid-column-start: 2;
-  justify-self: start;
   width: 85%;
 }
 
 .description-what h2 {
-  font-size: 50px;
+  font-size: 60px;
   line-height: 106.5%;
   color: #80543c;
   align-items: center;
@@ -344,17 +340,12 @@ h2.title5 {
   display: grid;
   grid-template-columns: 7% auto;
   grid-template-rows: auto auto;
-  column-gap: 15px;
-  padding-top: 5vh;
+  column-gap: 10px;
+  padding-top: 7vh;
 }
 
-#program_first {
-  color: rgba(132, 79, 58, 1);
-}
-
-#program_second {
+.program_grid h3 {
   color: #cf8062;
-  padding-top: 10vh;
 }
 
 .talk-title {
@@ -367,6 +358,7 @@ h2.title5 {
 
 .talk-title span {
   font-size: 20px;
+  color: rgba(132, 79, 58, 1);
 }
 
 .hora {
@@ -693,30 +685,19 @@ h2.title5 {
 
   /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
 
-  #what-section {
-    grid-template-columns: 50% 50%;
-    column-gap: 70px;
-    padding: 10vh 5vw 5vh 5vw;
-    height: auto;
-  }
-
   .img1 {
-    width: 100%;
+    margin-right: 10vh !important;
+    max-width: 50%;
     height: auto;
-  }
-
-  .description-what {
-    grid-column-start: 2;
-    justify-self: start;
-    width: 80%;
   }
 
   .description-what h2 {
-    font-size: 40px;
+    font-size: 45px;
   }
 
   .description-what p {
-    font-size: 17px;
+    padding-top: 5vh;
+    font-size: 20px;
   }
 
   /* --------------------------------------SECTION JEK----------------------------------------------------------------*/
@@ -907,28 +888,6 @@ h2.title5 {
   }
 
   /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
-
-  #what-section {
-    grid-template-columns: 50% 50%;
-    column-gap: 70px;
-    padding: 10vh 5vw 5vh 5vw;
-    height: auto;
-  }
-
-  .img1 {
-    width: 100%;
-    height: auto;
-  }
-
-  .description-what {
-    grid-column-start: 2;
-    justify-self: start;
-    width: 80%;
-  }
-
-  .description-what h2 {
-    font-size: 40px;
-  }
 
   .description-what p {
     font-size: 17px;
@@ -1177,21 +1136,32 @@ h2.title5 {
   /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
 
   #what-section {
-    padding: 10vh 5vw 5vh 5vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    padding: 12vh 10vw;
+  }
+
+  .description-what {
+    width: 100%;
     height: auto;
   }
 
-  .img1 {
-    width: auto;
-    height: 90%;
-  }
-
   .description-what h2 {
-    font-size: 40px;
+    font-size: 55px;
   }
 
   .description-what p {
-    font-size: 18px;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    font-size: 17px;
+  }
+
+  .img1 {
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 
   /* --------------------------------------SECTION WHY----------------------------------------------------------------*/
@@ -1285,90 +1255,6 @@ h2.title5 {
   .logo_text_jek p {
     font-size: 15px;
   }
-
-  /* --------------------------------------FOOTER----------------------------------------------------------------*/
-  /*#rodape {
-    height: 33vh;
-    width: 100vw;
-    background: #d07655;
-  }
-
-  .logoAI {
-    padding-left: 4vw;
-    padding-right: 35vw;
-    list-style-type: none;
-  }
-
-  .nav-bar-container {
-    padding-top: 3vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .nav-bar {
-    list-style-type: none;
-    padding-left: 5vw;
-  }
-
-  .separator2 {
-    height: 2.5px;
-    width: 93vw;
-    background: #ffffffcc;
-    margin-left: 3vw !important;
-    margin-top: 2vh !important;
-  }
-
-  .footer-bottom {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .bottom-text {
-    font-weight: 300;
-    padding-top: 2vh;
-    padding-right: 26vw;
-    color: #ffffff;
-  }
-
-  .socialmedia-bottom {
-    padding-top: 1vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logos-row {
-    padding-top: 2vh;
-    display: flex;
-    flex-direction: row;
-    column-gap: 2vw;
-  }
-
-  .socialmedia-text {
-    padding-top: 2vh;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  .container-contacts {
-    padding-left: 30vw;
-    padding-top: 2vh;
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-  }
-
-  .contact-us {
-    font-weight: 200;
-  }
-
-  .contacts {
-    font-weight: 200;
-  }*/
 }
 
 /*---------------------------------------------------*/
@@ -1378,9 +1264,9 @@ h2.title5 {
   /* --------------------------------------SECTION INITIAL----------------------------------------------------------------*/
 
   .line {
-    width: 60px;
-    height: 7px;
-    margin: 12px 0 0 0 !important;
+    width: 45px;
+    height: 5px;
+    margin: 5px 0 0 0 !important;
   }
   .nav-base .line1 {
     margin: 0 0 0 0 !important;
@@ -1411,7 +1297,7 @@ h2.title5 {
 
   .burger {
     padding: 0;
-    padding-right: 54px;
+    padding-right: 25px;
     margin-left: auto;
     display: block;
     z-index: 5;
@@ -1451,7 +1337,7 @@ h2.title5 {
   .nav-base {
     top: 0px;
     position: fixed;
-    height: 120px;
+    height: 55px;
     left: 0px;
     right: 0px;
     width: 100%;
@@ -1505,44 +1391,40 @@ h2.title5 {
 
   /* --------------------------------------SECTION WHAT----------------------------------------------------------------*/
   #what-section {
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    padding: 7vh 12vw 7vh 12vw;
-    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    padding: 12vh 12vw;
   }
 
   .description-what {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    justify-self: start;
     width: 100%;
     height: auto;
   }
 
   .description-what h2 {
-    font-size: 75px;
+    font-size: 50px;
   }
 
   .description-what p {
     padding-top: 3vh;
     padding-bottom: 0;
-    font-size: 30px;
+    font-size: 17px;
   }
 
   .img1 {
-    grid-column-start: 1;
-    grid-row-start: 2;
+    margin-top: 10vh !important;
     width: 100%;
     height: auto;
   }
 
   /* --------------------------------------SECTION WHY----------------------------------------------------------------*/
   #why-section {
-    padding: 10vh 0 5vh 0;
+    padding: 12vh 0 5vh 0;
   }
 
   .why-section__title__text {
-    font-size: 95px;
+    font-size: 50px;
     padding-bottom: 8vh;
   }
 
@@ -1557,6 +1439,7 @@ h2.title5 {
     height: auto;
     max-width: 100%;
     padding-bottom: 5vh;
+    width: 100%;
   }
 
   /* --------------------------------------SPONSORS----------------------------------------------------------------*/
@@ -1565,7 +1448,7 @@ h2.title5 {
   }
 
   .title4 {
-    font-size: 95px;
+    font-size: 50px;
   }
 
   .sponsor_img_container {
@@ -1593,12 +1476,12 @@ h2.title5 {
   }
 
   h2.title5 {
-    font-size: 95px;
+    font-size: 50px;
     padding-bottom: 2vh;
   }
 
   .date {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   .separator {
@@ -1608,25 +1491,21 @@ h2.title5 {
     background: rgba(213, 130, 98, 0.49);
   }
 
-  #program_second {
-    color: #cf8062;
-    padding-top: 5vh;
-  }
-
   .talk-title {
-    padding-bottom: 2.5vh;
+    padding-bottom: 2vh;
+    font-size: 25px;
   }
 
   .talk-title span {
-    font-size: 30px;
+    font-size: 17px;
   }
 
   .hora {
-    font-size: 1.8rem;
+    font-size: 15px;
   }
 
   .talk-desc {
-    font-size: 1.4rem;
+    font-size: 15px;
     width: 90%;
   }
 
@@ -1649,12 +1528,13 @@ h2.title5 {
   }
 
   .logo_text_jek img {
-    padding-left: 3vw;
+    padding-left: 0;
     padding-bottom: 2.5vh;
+    width: 100%;
   }
 
   .logo_text_jek p {
-    font-size: 30px;
+    font-size: 17px;
   }
 
   .foto-jek {
@@ -1671,8 +1551,8 @@ h2.title5 {
     grid-row-start: 3;
     padding-right: 0;
     padding-top: 2.5%;
-    font-size: 17px;
-    width: 35%;
+    font-size: 12px;
+    width: 40%;
   }
 
   /* --------------------------------------FOOTER----------------------------------------------------------------*/
