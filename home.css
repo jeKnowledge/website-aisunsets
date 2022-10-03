@@ -255,6 +255,7 @@ li {
 .why-section__content img {
   height: auto;
   width: 25%;
+  align-items: flex-start;
 }
 
 /*--------------------------------------------*/
@@ -1396,6 +1397,7 @@ h2.title5 {
     max-width: 80%;
     max-height: auto;
     padding-bottom: 5vh;
+    align-items: flex-start;
   }
 
   /* --------------------------------------SPONSORS----------------------------------------------------------------*/
