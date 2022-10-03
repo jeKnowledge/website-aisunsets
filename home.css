@@ -1569,3 +1569,51 @@ h2.title5 {
     padding-left: 5vw;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  #hero_content {
+    padding-left: 40px;
+  }
+  .description {
+    font-size: 30px;
+  }
+
+  .register-button {
+    padding: 2rem 1rem 2rem 1rem;
+    box-shadow: rgba(175, 59, 17, 0.47) 15px 18px 0px 1px;
+
+    font-size: 30px;
+  }
+
+  .description-what h2 {
+    font-size: 40px;
+  }
+
+  .description-what p {
+    font-size: 17px;
+  }
+
+  .img1 {
+    margin-top: 8vh !important;
+  }
+
+  .why-section__title__text {
+    font-size: 40px;
+  }
+
+  .title4 {
+    font-size: 40px;
+  }
+
+  h2.title5 {
+    font-size: 40px;
+  }
+
+  .date {
+    font-size: 25px;
+  }
+
+  .program_grid {
+    grid-template-columns: 15% auto;
+  }
+}
