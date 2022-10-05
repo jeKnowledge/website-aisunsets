@@ -1568,7 +1568,7 @@ h2.title5 {
   }
 
   .talk-title span {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .hora {
@@ -1577,7 +1577,7 @@ h2.title5 {
 
   .talk-desc {
     font-size: 17px;
-    width: 90%;
+    /*width: 90%;*/
   }
 
   .img-schedule {
@@ -1726,5 +1726,12 @@ h2.title5 {
 
   .program_grid {
     grid-template-columns: 15% auto;
+    padding: 7vh 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .program_grid {
+    grid-template-columns: 20% auto;
   }
 }
