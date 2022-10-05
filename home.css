@@ -1630,7 +1630,7 @@ h2.title5 {
 
   #img_insta,
   #img_linke {
-    width: 40px;
+    width: 35px;
     height: auto;
   }
   #rodape {
@@ -1650,6 +1650,8 @@ h2.title5 {
     list-style-type: none;
     padding-left: 5vw;
     padding-top: 1vh;
+    max-width: 70%;
+    height: auto;
   }
   .separator2 {
     width: 94vw;
@@ -1670,14 +1672,15 @@ h2.title5 {
     padding-bottom: 5vh;
   }
   .contact-us {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .contacts {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .logos-row {
     padding-left: 5vw;
+    column-gap: 4vw;
   }
 }
 
@@ -1727,6 +1730,12 @@ h2.title5 {
   .program_grid {
     grid-template-columns: 15% auto;
     padding: 7vh 0 0 0;
+  }
+
+  #img_insta,
+  #img_linke {
+    width: 30px;
+    height: auto;
   }
 }
 
