@@ -375,7 +375,7 @@ li {
 /*-------------------- Program ------------------*/
 /*--------------------------------------------*/
 
-.schedule-section {
+#schedule-section {
   height: auto;
   background: #f4e0c0;
   padding-left: 60px;
@@ -1022,7 +1022,7 @@ h2.title5 {
 
   /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
 
-  .schedule-section {
+  #schedule-section {
     padding-top: 5vh;
   }
 
@@ -1271,7 +1271,7 @@ h2.title5 {
 
   /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
 
-  .schedule-section {
+  #schedule-section {
     padding-top: 5vh;
   }
 
@@ -1542,7 +1542,7 @@ h2.title5 {
 
   /* --------------------------------------SECTION PROGRAM----------------------------------------------------------------*/
 
-  .schedule-section {
+  #schedule-section {
     padding: 6vh 5vh 0 5vh;
   }
 
