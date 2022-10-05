@@ -411,7 +411,7 @@ h2.title5 {
   grid-template-columns: 7% auto;
   grid-template-rows: auto auto;
   column-gap: 10px;
-  padding-top: 7vh;
+  padding: 7vh 12vw 0 0;
 }
 
 .program_grid h3 {
@@ -437,7 +437,7 @@ h2.title5 {
   /* font-family: "Song Myung";
   font-style: normal;
   font-weight: 400;*/
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .talk-desc {
@@ -787,6 +787,14 @@ h2.title5 {
     padding-top: 5vh;
     font-size: 20px;
   }
+  /**/
+  .program_grid {
+    /* display: grid;
+    grid-template-columns: 7% auto;
+    grid-template-rows: auto auto;*/
+    column-gap: 2%;
+    /* padding: 7vh 12vw 0 0;*/
+  }
 
   /* --------------------------------------SECTION JEK----------------------------------------------------------------*/
   #jek-section {
@@ -1031,11 +1039,11 @@ h2.title5 {
 
   .program_grid {
     display: grid;
-    grid-template-columns: 10% auto;
+    grid-template-columns: 8% auto;
   }
 
   .hora {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .talk-desc {
@@ -1284,11 +1292,15 @@ h2.title5 {
   }
 
   .hora {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
   }
 
   .talk-desc {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+
+  .talk-title {
+    font-size: 30px;
   }
 
   .img-schedule {
@@ -1560,11 +1572,11 @@ h2.title5 {
   }
 
   .hora {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .talk-desc {
-    font-size: 15px;
+    font-size: 17px;
     width: 90%;
   }
 
