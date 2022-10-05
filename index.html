@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/toplogoicon.png">
     <title>AI Sunsets</title>
     <script src="jquery.min.js"></script>
     <script>
@@ -30,9 +31,8 @@
               scrollTop: $("#schedule-section").offset().top,
             },
             1000
-          );
+            );
         });
-
         $(".sponsors").click(function () {
           $("html, body").animate(
             {
@@ -66,6 +66,7 @@
           );
         });
       });
+      
       function nav() {
         const burger = document.querySelector(".burger");
         const nav = document.querySelector(".nav-base");
@@ -74,6 +75,10 @@
         //navlinks.style.transition = "none";
         $(document).ready(function () {
           $(".nav-item").click(function () {
+            nav.classList.toggle("show");
+          });
+          // Issue fix: need to listen to nav-item-schedule aswell
+          $(".nav-item-schedule").click(function () {
             nav.classList.toggle("show");
           });
         });
@@ -336,16 +341,16 @@
           </a>
         </li>
         <li class="nav-bar what">
-          <a href="#what-section" class="nav-item">WHAT?</a>
+          <a href="#what-section" class="nav-item-footer">WHAT?</a>
         </li>
         <li class="nav-bar why">
-          <a href="#why-section" class="nav-item">WHY?</a>
+          <a href="#why-section" class="nav-item-footer">WHY?</a>
         </li>
         <li class="nav-bar sponsors">
-          <a href="#sponsors-section" class="nav-item">SPONSORS</a>
+          <a href="#sponsors-section" class="nav-item-footer">SPONSORS</a>
         </li>
         <li class="nav-bar about-us">
-          <a href="#jek-section" class="nav-item">ABOUT US</a>
+          <a href="#jek-section" class="nav-item-footer">ABOUT US</a>
         </li>
       </div>
       <div class="separator2"></div>

@@ -75,6 +75,31 @@ li {
   transition: opacity 200ms;
 }
 
+.nav-item-footer {
+  margin-right: 16px;
+  vertical-align: middle;
+  pointer-events: auto;
+  position: relative;
+  transition: opacity 200ms;
+}
+.nav-item-footer::before {
+  content: "";
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 12px;
+  left: -10%;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  border-bottom: 3px solid #ffffff;
+  transform: scale(0);
+  transition: transform 200ms ease-out;
+  transform-origin: bottom;
+  box-sizing: border-box;
+}
+
+
 .nav-item::before {
   content: "";
   width: 120%;
@@ -109,6 +134,12 @@ li {
 }
 
 .nav-item:hover::before {
+  transform: scale(1);
+  box-sizing: border-box;
+}
+
+
+.nav-item-footer:hover::before {
   transform: scale(1);
   box-sizing: border-box;
 }
@@ -521,6 +552,16 @@ h2.title5 {
 }
 
 .nav-item {
+  float: right;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: SongMyung-Regular;
+  font-weight: 400;
+  margin-right: 5vw !important;
+  padding-top: 5vh;
+}
+
+.nav-item-footer {
   float: right;
   text-decoration: none;
   color: #ffffff;
