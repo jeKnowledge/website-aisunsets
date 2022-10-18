@@ -461,6 +461,7 @@ h2.title5 {
   color: rgba(132, 79, 58, 1);
 }
 
+
 .hora {
   grid-template-rows: 2;
   grid-column-start: 1;
@@ -478,7 +479,7 @@ h2.title5 {
 
 .img-schedule {
   float: right;
-  padding-bottom: 5vh;
+  margin-top: 15vh !important;
 }
 
 /*--------------------------------------------*/
@@ -526,7 +527,6 @@ h2.title5 {
 
 #rodape {
   height: 33vh;
-  width: 100vw;
   background: #d07655;
 }
 
@@ -746,6 +746,7 @@ h2.title5 {
     background: rgba(157, 47, 28, 0.85);
     justify-content: end;
   }
+  
   .nav-links {
     width: 100vw;
     height: 100vh;
